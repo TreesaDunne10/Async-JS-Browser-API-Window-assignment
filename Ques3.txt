@@ -1,0 +1,29 @@
+Same-Origin Policy in the Context of AJAX Requests
+The Same-Origin Policy (SOP) is a critical security mechanism implemented in web browsers to restrict how documents or scripts loaded from one origin can interact with resources from another origin. An origin is defined by the combination of the protocol (e.g., http, https), domain (e.g., example.com), and port (if specified).
+
+Same-Origin Policy dictates that a web page can only make AJAX requests to the same origin from which it was loaded. This means that if your web page is served from http://example.com, it cannot make AJAX requests to http://another-domain.com or even https://example.com.
+
+Why SOP Exists:
+Security: SOP prevents malicious scripts on one page from obtaining sensitive data from another page, reducing the risk of cross-site scripting (XSS) and cross-site request forgery (CSRF) attacks.
+How to Work Around the Same-Origin Policy
+There are several techniques to work around the Same-Origin Policy when you need to make cross-origin requests:
+
+1. CORS (Cross-Origin Resource Sharing)
+What it is: CORS is a standard that allows servers to specify who can access their resources via cross-origin requests.
+
+How it works: The server responds with special headers (like Access-Control-Allow-Origin) that tell the browser to allow the request from a different origin.
+
+2. JSONP (JSON with Padding)
+What it is: JSONP is a technique that exploits the fact that <script> tags are not subject to the Same-Origin Policy.
+
+How it works: The server returns JavaScript code, typically wrapped in a function call, which can be dynamically inserted into the DOM using a <script> tag.
+
+3. Proxy Server
+What it is: A proxy server is an intermediate server that forwards requests from your web application to another server and then returns the response.
+
+How it works: Your web app makes a request to the proxy, which is on the same origin as the app, and the proxy forwards the request to the external server.
+
+4. Server-Side Solutions
+What it is: In this approach, the client sends a request to its own server, which then forwards the request to the external server.
+
+How it works: The client never directly interacts with the external server, so SOP is not violated.

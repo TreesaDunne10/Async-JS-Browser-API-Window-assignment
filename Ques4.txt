@@ -1,0 +1,27 @@
+Comparing Promises to Callbacks
+
+1. Callbacks:
+Definition: A callback is a function passed as an argument to another function, to be "called back" at a later time. This is a common pattern for handling asynchronous operations in JavaScript.
+
+Usage: Callbacks are often used to execute code after an asynchronous operation, such as fetching data from a server or reading a file.
+
+2. Promises:
+Definition: A Promise is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+Usage: Promises provide a more structured way to handle asynchronous code, allowing chaining and more manageable error handling.
+
+Why Promises are Preferred for Managing Asynchronous Code
+1. Readability and Maintainability:
+Promises help avoid the nested structures (callback hell) commonly associated with callbacks. The linear, flat structure of Promises makes the code easier to read and maintain, especially as the complexity of asynchronous operations increases.
+
+2. Error Handling:
+Promises centralize error handling in the catch block, making it easier to manage and debug errors. This contrasts with callbacks, where errors need to be explicitly handled in every callback function, increasing the chance of mistakes.
+
+3. Chaining and Composition:
+Promises naturally support chaining, which allows developers to compose multiple asynchronous operations in a sequential manner. This makes the code more modular and easier to reason about.
+
+4. Avoiding Inversion of Control:
+Promises offer more predictable control over when and how the asynchronous code is executed, reducing the risks associated with handing over control to callback functions.
+
+5. Integration with Modern JavaScript:
+Promises are natively supported in modern JavaScript and are a fundamental part of async/await syntax, which further simplifies working with asynchronous code by allowing developers to write asynchronous code that looks synchronous.

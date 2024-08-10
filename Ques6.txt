@@ -1,0 +1,23 @@
+Purpose and Usage of localStorage and sessionStorage APIs
+Both localStorage and sessionStorage are part of the Web Storage API, which provides mechanisms for storing key-value pairs within a user's browser. These storage solutions are more secure and user-friendly compared to traditional cookies and can be accessed and manipulated through JavaScript.
+
+1. localStorage
+
+Purpose:
+localStorage is used to store data persistently in the browser. The data stored in localStorage has no expiration time and will remain even after the browser is closed and reopened, or the system is restarted. It’s useful for saving data that needs to persist across sessions, such as user preferences, themes, or cached data.
+
+Usage:
+Data stored in localStorage is available across all tabs and windows with the same origin (same protocol, domain, and port).
+
+localStorage has a larger storage limit (typically around 5-10 MB) compared to cookies.
+
+2. sessionStorage
+
+Purpose:
+sessionStorage is used to store data for the duration of a single session. This data is cleared when the page session ends, which happens when the tab or window is closed. It’s ideal for temporary storage needs, such as storing data during a single page session (e.g., form data that should not persist after the session ends).
+
+Usage:
+Data stored in sessionStorage is available only within the tab or window where it was created. It is not shared across tabs or windows, even if they are from the same origin.
+
+Like localStorage, sessionStorage typically has a storage limit of about 5 MB.
+
